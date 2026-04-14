@@ -1,0 +1,35 @@
+<Solution>
+  <Projects>
+    <!-- Ядро -->
+    <Project Path="src/MyECS.Core/MyECS.Core.csproj" />
+    <Project Path="src/MyECS.Extensions/MyECS.Extensions.csproj">
+      <ProjectReferences>
+        <ProjectReference Path="src/MyECS.Core/MyECS.Core.csproj" />
+      </ProjectReferences>
+    </Project>
+    <Project Path="src/MyECS.SourceGen/MyECS.SourceGen.csproj" />
+
+    <!-- Тесты -->
+    <Project Path="tests/MyECS.Tests/MyECS.Tests.csproj">
+      <ProjectReferences>
+        <ProjectReference Path="src/MyECS.Core/MyECS.Core.csproj" />
+        <ProjectReference Path="src/MyECS.Extensions/MyECS.Extensions.csproj" />
+      </ProjectReferences>
+    </Project>
+
+    <!-- Бенчмарки -->
+    <Project Path="benchmarks/MyECS.Benchmarks/MyECS.Benchmarks.csproj">
+      <ProjectReferences>
+        <ProjectReference Path="src/MyECS.Core/MyECS.Core.csproj" />
+      </ProjectReferences>
+    </Project>
+
+    <!-- Пример -->
+    <Project Path="samples/MyECS.Sample/MyECS.Sample.csproj">
+      <ProjectReferences>
+        <ProjectReference Path="src/MyECS.Core/MyECS.Core.csproj" />
+        <ProjectReference Path="src/MyECS.Extensions/MyECS.Extensions.csproj" />
+      </ProjectReferences>
+    </Project>
+  </Projects>
+</Solution>
